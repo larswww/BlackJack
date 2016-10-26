@@ -1,0 +1,6 @@
+C:\Users\LW\Documents\Visual Studio 2015\Projects\BlackJackWS3\BlackJackWS3\BlackJackWS3\bin\Debug\BlackJackWS3.exe.config
+C:\Users\LW\Documents\Visual Studio 2015\Projects\BlackJackWS3\BlackJackWS3\BlackJackWS3\bin\Debug\BlackJackWS3.exe
+C:\Users\LW\Documents\Visual Studio 2015\Projects\BlackJackWS3\BlackJackWS3\BlackJackWS3\bin\Debug\BlackJackWS3.pdb
+C:\Users\LW\Documents\Visual Studio 2015\Projects\BlackJackWS3\BlackJackWS3\BlackJackWS3\obj\Debug\BlackJackWS3.csprojResolveAssemblyReference.cache
+C:\Users\LW\Documents\Visual Studio 2015\Projects\BlackJackWS3\BlackJackWS3\BlackJackWS3\obj\Debug\BlackJackWS3.exe
+C:\Users\LW\Documents\Visual Studio 2015\Projects\BlackJackWS3\BlackJackWS3\BlackJackWS3\obj\Debug\BlackJackWS3.pdb
