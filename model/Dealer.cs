@@ -70,11 +70,11 @@ namespace BlackJackWS3.model
             return false;
         }
 
-        public bool Stand(Player a_player)
+        public bool Stand()
         {
             if (m_deck != null)
             {
-                a_player.ShowHand();
+                ShowHand();
 
                 while (m_hitRule.DoHit(this))
                 {
@@ -82,7 +82,7 @@ namespace BlackJackWS3.model
                     Card c;
                     c = m_deck.GetCard();
                     c.Show(true);
-                    a_player.DealCard(c);
+                    DealCard(c);
                 }
             }
             return true;

@@ -40,7 +40,7 @@ namespace BlackJackWS3.model
         public bool Stand()
         {
             // TODO: Implement this according to Game_Stand.sequencediagram
-            return m_dealer.Stand(m_player);
+            return m_dealer.Stand();
         }
 
         public IEnumerable<Card> GetDealerHand()
