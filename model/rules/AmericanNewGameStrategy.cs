@@ -10,23 +10,10 @@ namespace BlackJackWS3.model.rules
     {
         public bool NewGame(Deck a_deck, Dealer a_dealer, Player a_player)
         {
-            Card c;
-           
-            c = a_deck.GetCard();
-            c.Show(true);
-            a_player.DealCard(c);
-
-            c = a_deck.GetCard();
-            c.Show(true);
-            a_dealer.DealCard(c);
-
-            c = a_deck.GetCard();
-            c.Show(true);
-            a_player.DealCard(c);
-
-            c = a_deck.GetCard();
-            c.Show(false);
-            a_dealer.DealCard(c);
+            a_dealer.GiveCardToPlayer(a_player, true);
+            a_dealer.GiveCardToPlayer(a_dealer, true);
+            a_dealer.GiveCardToPlayer(a_player, true);
+            a_dealer.GiveCardToPlayer(a_dealer, false);
 
             return true;
         }

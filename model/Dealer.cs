@@ -40,14 +40,33 @@ namespace BlackJackWS3.model
         {
             if (m_deck != null && a_player.CalcScore() < g_maxScore && !IsGameOver())
             {
-                Card c;
-                c = m_deck.GetCard();
-                c.Show(true);/* TODO abstract into a function */
-                a_player.DealCard(c);
+                GiveCardToPlayer(a_player, true);
 
                 return true;
             }
             return false;
+        }
+
+        public bool Stand()
+        {
+            if (m_deck != null)
+            {
+                ShowHand();
+
+                while (m_hitRule.DoHit(this))
+                {
+                    GiveCardToPlayer(this, true);
+                }
+                return true;
+            }
+            return false;
+        }
+
+        public void GiveCardToPlayer(Player a_player, bool isShown)
+        {
+            Card c = m_deck.GetCard();
+            c.Show(isShown);
+            a_player.DealCard(c);
         }
 
         public bool IsDealerWinner(Player a_player)
@@ -65,24 +84,5 @@ namespace BlackJackWS3.model
             }
             return false;
         }
-
-        public bool Stand()
-        {
-            if (m_deck != null)
-            {
-                ShowHand();
-
-                while (m_hitRule.DoHit(this))
-                {
-                    Card c;
-                    c = m_deck.GetCard();
-                    c.Show(true);
-                    DealCard(c);
-                }
-                return true;
-            }
-            return false;
-        }
-
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlackJack2.controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,22 +21,22 @@ namespace BlackJackWS3.controller
                 a_view.DisplayGameOver(a_game.IsDealerWinner());
             }
 
-            int input = a_view.GetInput();
+            ViewAction action = a_view.GetAction();
 
-            if (input == 'p')
+            if (action == ViewAction.Newgame)
             {
                 a_game.NewGame();
             }
-            else if (input == 'h')
+            else if (action == ViewAction.Hit)
             {
                 a_game.Hit();
             }
-            else if (input == 's')
+            else if (action == ViewAction.Stand)
             {
                 a_game.Stand();
             }
 
-            return input != 'q';
+            return action != ViewAction.Quit;
         }
     }
 }
