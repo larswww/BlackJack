@@ -11,9 +11,9 @@ namespace BlackJackWS3.model.rules
 
         public bool NewGame(Deck a_deck, Dealer a_dealer, Player a_player)
         {
-            a_dealer.giveCardToPlayer(a_player, true);
-            a_dealer.giveCardToPlayer(a_dealer, true);
-            a_dealer.giveCardToPlayer(a_player, true);
+            a_dealer.GiveCardToPlayer(a_player, true);
+            a_dealer.GiveCardToPlayer(a_dealer, true);
+            a_dealer.GiveCardToPlayer(a_player, true);
 
             return true;
         }

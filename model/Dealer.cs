@@ -40,7 +40,7 @@ namespace BlackJackWS3.model
         {
             if (m_deck != null && a_player.CalcScore() < g_maxScore && !IsGameOver())
             {
-                giveCardToPlayer(a_player, true);
+                GiveCardToPlayer(a_player, true);
 
                 return true;
             }
@@ -55,14 +55,14 @@ namespace BlackJackWS3.model
 
                 while (m_hitRule.DoHit(this))
                 {
-                    giveCardToPlayer(this, true);
+                    GiveCardToPlayer(this, true);
                 }
                 return true;
             }
             return false;
         }
 
-        public void giveCardToPlayer(Player a_player, bool isShown)
+        public void GiveCardToPlayer(Player a_player, bool isShown)
         {
             Card c = m_deck.GetCard();
             c.Show(isShown);
