@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlackJackWS3.controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,9 +11,19 @@ namespace BlackJackWS3.model
     {
         private List<Card> m_hand = new List<Card>();
 
+        private GameObserver m_observer;
+
+        public GameObserver Observer
+        {
+            get { return m_observer; }
+            set { m_observer = value; }
+        }
+
+
         public void DealCard(Card a_card)
         {
             m_hand.Add(a_card);
+            this.Observer.tempGamePause();
         }
 
         public IEnumerable<Card> GetHand()

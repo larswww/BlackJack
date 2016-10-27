@@ -7,36 +7,60 @@ using System.Threading.Tasks;
 
 namespace BlackJackWS3.controller
 {
-    class PlayGame
+    class PlayGame : GameObserver
     {
-        public bool Play(model.Game a_game, view.IView a_view)
+        private view.IView m_view;
+        private model.Game m_game;
+
+        public PlayGame(view.IView a_view, model.Game a_model)
         {
-            a_view.DisplayWelcomeMessage();
+            m_view = a_view;
+            m_game = a_model;
+        }
 
-            a_view.DisplayDealerHand(a_game.GetDealerHand(), a_game.GetDealerScore());
-            a_view.DisplayPlayerHand(a_game.GetPlayerHand(), a_game.GetPlayerScore());
-
-            if (a_game.IsGameOver())
+        public bool Play()
+        {
+            displayWelcomeMessageAndHands();
+                
+            if (m_game.IsGameOver())
             {
-                a_view.DisplayGameOver(a_game.IsDealerWinner());
+                m_view.DisplayGameOver(m_game.IsDealerWinner());
             }
 
-            ViewAction action = a_view.GetAction();
+            ViewAction action = m_view.GetAction();
 
             if (action == ViewAction.Newgame)
             {
-                a_game.NewGame();
+                m_game.NewGame();
             }
             else if (action == ViewAction.Hit)
             {
-                a_game.Hit();
+                m_game.Hit();
             }
             else if (action == ViewAction.Stand)
             {
-                a_game.Stand();
+                m_game.Stand();
             }
 
             return action != ViewAction.Quit;
         }
+
+        public void tempGamePause()
+        {
+            System.Threading.Thread.Sleep(1000);
+            displayWelcomeMessageAndHands();
+        }
+
+
+        public void displayWelcomeMessageAndHands()
+        {
+
+            m_view.DisplayWelcomeMessage();
+
+            m_view.DisplayDealerHand(m_game.GetDealerHand(), m_game.GetDealerScore());
+            m_view.DisplayPlayerHand(m_game.GetPlayerHand(), m_game.GetPlayerScore());
+
+        }
+
     }
 }

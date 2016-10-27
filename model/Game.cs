@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlackJackWS3.controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,12 @@ namespace BlackJackWS3.model
         {
             m_dealer = new Dealer(new rules.RulesFactory());
             m_player = new Player();
+        }
+
+        public void SetSubscriber(GameObserver a_observer)
+        {
+            m_dealer.Observer = a_observer;
+            m_player.Observer = a_observer;
         }
 
         public bool IsGameOver()

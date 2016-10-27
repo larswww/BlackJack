@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlackJackWS3.controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,6 @@ namespace BlackJackWS3.model
         private rules.INewGameStrategy m_newGameRule;
         private rules.IHitStrategy m_hitRule;
         private rules.IWinStrategy m_winRule;
-
 
         public Dealer(rules.RulesFactory a_rulesFactory)
         {
@@ -40,6 +40,7 @@ namespace BlackJackWS3.model
         {
             if (m_deck != null && a_player.CalcScore() < g_maxScore && !IsGameOver())
             {
+
                 GiveCardToPlayer(a_player, true);
 
                 return true;
