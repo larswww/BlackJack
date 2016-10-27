@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlackJack2.controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,34 @@ namespace BlackJackWS3.view
             System.Console.WriteLine("----------------------");
             System.Console.WriteLine("Skriv 'p' för att Spela, 'h' för nytt kort, 's' för att stanna 'q' för att avsluta\n");
         }
-        public int GetInput()
+
+        public ViewAction GetAction()
+        {
+            int input = GetInput();
+
+            if (input == 'p')
+            {
+                return ViewAction.Newgame;
+            }
+            else if (input == 'h')
+            {
+                return ViewAction.Hit;
+            }
+            else if (input == 's')
+            {
+                return ViewAction.Stand;
+            }
+            else if (input == 'q')
+            {
+                return ViewAction.Quit;
+            }
+            else
+            {
+                return ViewAction.Unknown;
+            }
+        }
+
+        private int GetInput()
         {
             return System.Console.In.Read();
         }
