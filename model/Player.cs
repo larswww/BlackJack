@@ -57,8 +57,23 @@ namespace BlackJackWS3.model
                     }
                 }
             }
+           
 
             return score;
+        }
+
+        public bool hasAce()
+        {
+
+            foreach (Card c in GetHand())
+            {
+                if (c.GetValue() == Card.Value.Ace) {
+                    return true;
+
+                }
+            }
+
+            return false;
         }
     }
 }

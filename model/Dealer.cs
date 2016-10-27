@@ -10,16 +10,18 @@ namespace BlackJackWS3.model
     {
 
         private Deck m_deck = null;
-        private const int g_maxScore = 21;
+        public const int g_maxScore = 21;
 
         private rules.INewGameStrategy m_newGameRule;
         private rules.IHitStrategy m_hitRule;
+        private rules.IWinStrategy m_winRule;
 
 
         public Dealer(rules.RulesFactory a_rulesFactory)
         {
             m_newGameRule = a_rulesFactory.GetNewGameRule();
             m_hitRule = a_rulesFactory.GetHitRule();
+            m_winRule = a_rulesFactory.GetWinRule();
         }
 
         public bool NewGame(Player a_player)
@@ -40,7 +42,7 @@ namespace BlackJackWS3.model
             {
                 Card c;
                 c = m_deck.GetCard();
-                c.Show(true);
+                c.Show(true);/* TODO abstract into a function */
                 a_player.DealCard(c);
 
                 return true;
@@ -50,15 +52,9 @@ namespace BlackJackWS3.model
 
         public bool IsDealerWinner(Player a_player)
         {
-            if (a_player.CalcScore() > g_maxScore)
-            {
-                return true;
-            }
-            else if (CalcScore() > g_maxScore)
-            {
-                return false;
-            }
-            return CalcScore() >= a_player.CalcScore();
+
+            return m_winRule.isDealerWinner(a_player, this);
+
         }
 
         public bool IsGameOver()
@@ -78,14 +74,15 @@ namespace BlackJackWS3.model
 
                 while (m_hitRule.DoHit(this))
                 {
-                    m_hitRule.DoHit(this);
                     Card c;
                     c = m_deck.GetCard();
                     c.Show(true);
                     DealCard(c);
                 }
+                return true;
             }
-            return true;
+            return false;
         }
+
     }
 }

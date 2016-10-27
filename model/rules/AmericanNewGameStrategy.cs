@@ -11,7 +11,7 @@ namespace BlackJackWS3.model.rules
         public bool NewGame(Deck a_deck, Dealer a_dealer, Player a_player)
         {
             Card c;
-
+           
             c = a_deck.GetCard();
             c.Show(true);
             a_player.DealCard(c);
