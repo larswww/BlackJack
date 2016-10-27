@@ -1,0 +1,499 @@
+<Project>
+  <Name>Untitled</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>Untitled</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>PlayGame</Name>
+        <Access>Public</Access>
+        <Location left="2013" top="449" />
+        <Size width="162" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Interface">
+        <Name>GameObserver</Name>
+        <Access>Public</Access>
+        <Location left="1816" top="302" />
+        <Size width="162" height="61" />
+        <Collapsed>True</Collapsed>
+      </Entity>
+      <Entity type="Enum">
+        <Name>ViewAction</Name>
+        <Access>Public</Access>
+        <Location left="1816" top="213" />
+        <Size width="162" height="61" />
+        <Collapsed>True</Collapsed>
+      </Entity>
+      <Entity type="Class">
+        <Name>Card</Name>
+        <Access>Public</Access>
+        <Location left="964" top="448" />
+        <Size width="162" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Player</Name>
+        <Access>Public</Access>
+        <Location left="1281" top="448" />
+        <Size width="162" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Game</Name>
+        <Access>Public</Access>
+        <Location left="1561" top="448" />
+        <Size width="162" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Dealer</Name>
+        <Access>Public</Access>
+        <Location left="1281" top="593" />
+        <Size width="162" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Deck</Name>
+        <Access>Public</Access>
+        <Location left="964" top="593" />
+        <Size width="162" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Interface">
+        <Name>IView</Name>
+        <Access>Public</Access>
+        <Location left="1264" top="121" />
+        <Size width="162" height="216" />
+        <Collapsed>True</Collapsed>
+      </Entity>
+      <Entity type="Class">
+        <Name>SimpleView</Name>
+        <Access>Public</Access>
+        <Location left="1375" top="301" />
+        <Size width="162" height="216" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>SwedishView</Name>
+        <Access>Public</Access>
+        <Location left="1174" top="301" />
+        <Size width="162" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>BasicHitStrategy</Name>
+        <Access>Public</Access>
+        <Location left="1396" top="967" />
+        <Size width="162" height="216" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AmericanNewGameStrategy</Name>
+        <Access>Public</Access>
+        <Location left="1033" top="893" />
+        <Size width="204" height="77" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>InternationalNewGameStrategy</Name>
+        <Access>Public</Access>
+        <Location left="1033" top="964" />
+        <Size width="219" height="216" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>RulesFactory</Name>
+        <Access>Public</Access>
+        <Location left="1482" top="1072" />
+        <Size width="162" height="216" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AlternateWinStrategy</Name>
+        <Access>Public</Access>
+        <Location left="758" top="964" />
+        <Size width="162" height="216" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>OriginalWinStrategy</Name>
+        <Access>Public</Access>
+        <Location left="758" top="870" />
+        <Size width="162" height="216" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Soft17GameStrategy</Name>
+        <Access>Public</Access>
+        <Location left="1396" top="893" />
+        <Size width="162" height="216" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Interface">
+        <Name>IHitStrategy</Name>
+        <Access>Public</Access>
+        <Location left="1515" top="786" />
+        <Size width="162" height="216" />
+        <Collapsed>True</Collapsed>
+      </Entity>
+      <Entity type="Interface">
+        <Name>INewGameStrategy</Name>
+        <Access>Public</Access>
+        <Location left="1175" top="786" />
+        <Size width="162" height="216" />
+        <Collapsed>True</Collapsed>
+      </Entity>
+      <Entity type="Interface">
+        <Name>IWinStrategy</Name>
+        <Access>Public</Access>
+        <Location left="868" top="786" />
+        <Size width="162" height="216" />
+        <Collapsed>True</Collapsed>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Dependency" first="0" second="2">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2054</X>
+          <Y>392</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="6" second="4">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Association" first="7" second="3">
+        <Label>m_cards</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <EndMultiplicity>*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="4" second="3">
+        <Label>m_hand</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1232</X>
+          <Y>468</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="6" second="7">
+        <Label>m_deck</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="5" second="4">
+        <Label>m_player</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="5" second="6">
+        <Label>m_dealer</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>1516</X>
+          <Y>617</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="0" second="5">
+        <Label>m_game</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1957</X>
+          <Y>468</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1758</X>
+          <Y>467</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Realization" first="10" second="8">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1248</X>
+          <Y>276</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1311</X>
+          <Y>196</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Realization" first="9" second="8">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1473</X>
+          <Y>249</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1368</X>
+          <Y>198</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Association" first="0" second="8">
+        <Label>m_view</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>1451</X>
+          <Y>143</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Realization" first="0" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2054</X>
+          <Y>382</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Dependency" first="8" second="2">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1404</X>
+          <Y>191</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1864</X>
+          <Y>191</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Dependency" first="8" second="3">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1220</X>
+          <Y>143</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Realization" first="17" second="18">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1600</X>
+          <Y>922</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Realization" first="11" second="18">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1610</X>
+          <Y>989</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1659</X>
+          <Y>856</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Realization" first="13" second="19">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1275</X>
+          <Y>981</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1311</X>
+          <Y>899</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Realization" first="12" second="19">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1262</X>
+          <Y>918</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Realization" first="15" second="20">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>986</X>
+          <Y>980</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Realization" first="16" second="20">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>957</X>
+          <Y>889</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Association" first="6" second="20">
+        <Label>m_winRule</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>948</X>
+          <Y>757</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="6" second="18">
+        <Label>m_hitRule</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1363</X>
+          <Y>671</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1588</X>
+          <Y>746</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="6" second="19">
+        <Label>m_newGameRule</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1363</X>
+          <Y>730</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1261</X>
+          <Y>756</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Dependency" first="6" second="14">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1406</X>
+          <Y>663</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1798</X>
+          <Y>1091</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Dependency" first="14" second="16">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1444</X>
+          <Y>1093</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>707</X>
+          <Y>897</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Dependency" first="14" second="15">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1457</X>
+          <Y>1093</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Dependency" first="14" second="12">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>1006</X>
+          <Y>919</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Dependency" first="14" second="13">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>1129</X>
+          <Y>1039</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Dependency" first="14" second="17">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1431</X>
+          <Y>1094</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1365</X>
+          <Y>917</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Dependency" first="14" second="11">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1451</X>
+          <Y>1092</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Association" first="4" second="1">
+        <Label>m_observer</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
