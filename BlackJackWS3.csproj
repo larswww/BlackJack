@@ -43,9 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="controller\GameObserver.cs" />
+    <Compile Include="model\GameObserver.cs" />
     <Compile Include="controller\PlayGame.cs" />
-    <Compile Include="controller\ViewAction.cs" />
+    <Compile Include="view\ViewAction.cs" />
     <Compile Include="model\Card.cs" />
     <Compile Include="model\Dealer.cs" />
     <Compile Include="model\Deck.cs" />

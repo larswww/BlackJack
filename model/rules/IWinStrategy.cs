@@ -8,6 +8,6 @@ namespace BlackJackWS3.model.rules
 {
     interface IWinStrategy
     {
-        bool isDealerWinner(Player a_player, Dealer a_dealer);
+        bool isDealerWinner(Player a_player, Dealer a_dealer, int g_maxScore);
     }
 }

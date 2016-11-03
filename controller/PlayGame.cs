@@ -16,11 +16,12 @@ namespace BlackJackWS3.controller
         {
             m_view = a_view;
             m_game = a_model;
+            m_game.SetSubscriber(this);
         }
 
         public bool Play()
         {
-            displayWelcomeMessageAndHands();
+            DisplayWelcomeMessageAndHands();
                 
             if (m_game.IsGameOver())
             {
@@ -48,11 +49,11 @@ namespace BlackJackWS3.controller
         public void tempGamePause()
         {
             System.Threading.Thread.Sleep(1000);
-            displayWelcomeMessageAndHands();
+            DisplayWelcomeMessageAndHands();
         }
 
 
-        public void displayWelcomeMessageAndHands()
+        public void DisplayWelcomeMessageAndHands()
         {
 
             m_view.DisplayWelcomeMessage();

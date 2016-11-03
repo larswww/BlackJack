@@ -11,7 +11,7 @@ namespace BlackJackWS3.model
     {
 
         private Deck m_deck = null;
-        public const int g_maxScore = 21;
+        private const int g_maxScore = 21;
 
         private rules.INewGameStrategy m_newGameRule;
         private rules.IHitStrategy m_hitRule;
@@ -73,7 +73,7 @@ namespace BlackJackWS3.model
         public bool IsDealerWinner(Player a_player)
         {
 
-            return m_winRule.isDealerWinner(a_player, this);
+            return m_winRule.isDealerWinner(a_player, this, g_maxScore);
 
         }
 

@@ -9,14 +9,14 @@ namespace BlackJackWS3.model.rules
     class AlternateWinStrategy : IWinStrategy
     {
 
-        public bool isDealerWinner(Player a_player, Dealer a_dealer)
+        public bool isDealerWinner(Player a_player, Dealer a_dealer, int g_maxScore)
         {
 
-            if (a_player.CalcScore() > Dealer.g_maxScore)
+            if (a_player.CalcScore() > g_maxScore)
             {
                 return true;
             }
-            else if (a_dealer.CalcScore() > Dealer.g_maxScore)
+            else if (a_dealer.CalcScore() > g_maxScore)
             {
                 return false;
             }
