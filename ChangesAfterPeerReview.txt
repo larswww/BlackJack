@@ -1,0 +1,34 @@
+#Comment:
+To solve this an Enum class ViewAction was created in the controller namespace.
+I think it is a bad idea to put it there, since our IView interface is now dependent on PlayGame controller (needs to import/use BlackJack2.controller).
+A better idea would be to place the ViewAction class into the view namespace and even better - to nest it within the IViewinterface (I think C# supports such implementation). This way we make our IView independent.
+Othervise the "hidden dependency" was removed.
+
+#Response:
+We decided to move the ActionTypes enum to the View package as per the feedback. But we did not move it into the Interface class. As provided discussion shows it is up to the preferences of the developer. http://stackoverflow.com/questions/2282976/should-enums-in-c-sharp-have-their-own-file
+
+#Comment:
+An interface IWinStrategy in the namespace model.rules is now responsible for checking if the dealer is the winner. This allows easy implementation of new winning strategies.
+Since the value of maxScore is involved in calculating the winner, this value was made public (originally it was private), so it can be accessed directly from other namespaces (i.e. a_dealer.maxScore). This is a bad idea to make a private field public since it would allow other members to modify it, instead I would suggest making the field private again and passing this value as a parametr to the method isDealerWinner(Player a_player, Player a_dealer, int maxScore).
+
+#Response:
+Even though we did not agree 100% with the suggested change of making the g_maxscore in dealer private again and sending it in as an argument into the required methods we did it anyway. We see the points of the reviewer but adding more arguments is also not a good solution, Robert C. Martin states that a method should have three arguments only very rarely [1, Chap 4, Argument List]. Also the g_maxScore is a constant so it can’t be modified which make the public modifier less impactful.
+
+#Comment:
+The interface GameObserver was placed in controller namespace which led to violation of MVC separation principle - now model.Player has an association relation to controller [1]. Hence the interface GameObserver should be placed in the model namespace.
+Also it is a common practice to use a List to collect all observers for a certain class, since we might have more than one. So current implementation with a single possible observer may limit future code developments.
+Also I wouldn't recommend subscribing an observer in the main class Program, I think that the PlayGame class is the information expert in this case. So it should be done there in the constructor.
+
+#Response:
+Implemented except for making observers a list as it would require extra unnecessary code and the fulfillment of the requirements would be the same. The extra unnecessary code would mostly be the code for the removal of a observer from a list and the looping of the list when the observer function should be called.
+
+#Comment:
+When working on some else's code it is a good idea to follow the established naming convention. In this case method's name should start with capital letter (e.g. public void tempGamePause(), displayWelcomeMessageAndHands(), etc).
+
+#Response:
+Changed.
+
+##References:
+1. Robert C Martin, Clean Code: A Handbook of Agile Software Craftsmanship, 2008, ISBN: 0132350882
+
+
